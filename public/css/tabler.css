@@ -7801,12 +7801,12 @@ Navbar
 .navbar {
   align-items: stretch;
   min-height: 3.5rem;
-  --navbar-bg-color: transparent;
+  --navbar-bg-color: #1A237E;
   --navbar-color: rgba(30, 41, 59, 0.7);
   --navbar-brand-color: #1e293b;
   --link-active-color: #1e293b;
   --link-disabled-color: rgba(30, 41, 59, 0.3);
-  background: transparent;
+  background: var(--navbar-bg-color);
   color: rgba(30, 41, 59, 0.7); }
   .navbar-collapse .navbar {
     flex-grow: 1; }

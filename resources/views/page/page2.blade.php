@@ -27,17 +27,18 @@
                 <tr>
                     <td><b> Email </b></td>
                     <td> : </td>
-                    <td> <input type="email" name="email"> </td>
+                    <td> <input type="email" name="email" > </td>
                 </tr>
                 <tr>
                     <td><b> Nama </b></td>
                     <td> : </td>
-                    <td> <input type="text" name="nama" value=""> </td>
+                    <td> <input type="text" name="nama" > </td>
                 </tr>
                 <tr>
                     <td><b> NIP </b></td>
                     <td> : </td>
-                    <td> <input type="number" name="nip" value=""> </td>
+                    <td> <input type="number" name="nip" >
+                    </td>
                 </tr>
                 <tr>
                     <td><b> Jenis Gratifikasi </b></td>

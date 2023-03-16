@@ -17,17 +17,16 @@ class LoginController extends Controller
     {
 
         $credentials = $request->validate([
-        'email' =>'required|email:dns',
-        'password' =>'required'
+            'email' => 'required|email:dns',
+            'password' => 'required'
         ]);
 
-        if(Auth::attempt($credentials)){
+        if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('/form');
+            return redirect()->intended('/page-1');
         }
 
         return back()->with('loginError', 'Login Failed!');
-
     }
 
     public function logout()
@@ -40,5 +39,4 @@ class LoginController extends Controller
 
         return redirect('/');
     }
-
 }

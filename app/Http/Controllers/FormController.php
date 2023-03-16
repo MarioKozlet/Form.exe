@@ -38,39 +38,36 @@ class FormController extends Controller
 
         $validatedData = $request->validate([
             'email' => 'email:dns',
-            'nip' => '',
-            'nip1' => '',
-            'nama' => '',
-            'jenis' => '',
-            'deskripsi' => '',
-            'harga' => '',
-            'peristiwa' => '',
-            'tgl' => '',
-            'lokasi' => '',
-            'gratifikasi' => '',
-            'image' => 'image|file',
-            'namalengkap' => '',
-            'namalengkap1' => '',
-            'jabatan' => '',
-            'pangkat' => '',
-            'jabatan1' => '',
-            'pangkat1' => '',
-            'bagian' => '',
-            'bagian1' => '',
-            'bentukpoten' => ''
+            'nip' => 'required',
+            'nip1' => 'required',
+            'nama' => 'required',
+            'jenis' => 'required',
+            'deskripsi' => 'required',
+            'harga' => 'required',
+            'peristiwa' => 'required',
+            'tgl' => 'required',
+            'lokasi' => 'required',
+            'gratifikasi' => 'required',
+            'image' => 'image|pdf',
+            'namalengkap' => 'required',
+            'namalengkap1' => 'required',
+            'jabatan' => 'required',
+            'pangkat' => 'required',
+            'jabatan1' => 'required',
+            'pangkat1' => 'required',
+            'bagian' => 'required',
+            'bagian1' => 'required',
+            'bentukpoten' => 'required'
         ]);
 
-        // $validatedData['user_id'] = auth()->user()->id;
 
-        if($request->file('image'))
-        {
+        $validatedData['user_id'] = auth()->user()->id;
+        if ($request->file('image')) {
             $validatedData['image'] = $request->file('image')->store('file-images');
         }
 
         form::create($validatedData);
-        return redirect('/')->with('success','Data anda berhasil di input! ');
-
-
+        return redirect('/')->with('success', 'Data anda berhasil di input! ');
     }
 
     /**

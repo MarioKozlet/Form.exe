@@ -19,11 +19,11 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
-Route::get('/', [LoginController::class, 'index'])->name('login');
-Route::post('/', [LoginController::class, 'authenticate'])->name('authlogin');
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/login', [LoginController::class, 'authenticate'])->name('authlogin');
 // Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::get('/page-1', [PageController::class, 'Page1'])->name('page-1');
+Route::get('/', [PageController::class, 'Page1'])->name('page-1');
 Route::post('/page-1/proses', [PageController::class, 'Page1Proses'])->name('page-1-proses');
 
 Route::resource('/admin', AdminController::class, ['name' => 'admin']);

@@ -28,17 +28,17 @@
                 <tr>
                     <td><b> Email </b></td>
                     <td> : </td>
-                    <td> <input type="email" name="email" required> </td>
+                    <td> <input class="form-control w-50" type="email" name="email" required> </td>
                 </tr>
                 <tr>
                     <td><b> Nama </b></td>
                     <td> : </td>
-                    <td> <input type="text" name="nama" value="" required> </td>
+                    <td> <input class="form-control w-50" type="text" name="nama" value="" required> </td>
                 </tr>
                 <tr>
                     <td><b> NIP </b></td>
                     <td> : </td>
-                    <td> <input type="number" name="nip" value="" required> </td>
+                    <td> <input class="form-control w-50" type="number" name="nip" value="" required> </td>
                 </tr>
                 <tr>
                     <td><b> Jenis Gratifikasi </b></td>
@@ -141,19 +141,19 @@
                     <b>Tanggal Pemberian</b>
                 </div>
                 <div class="row w-25 mx-1 mt-2">
-                    <input type="date" name="tgl" value="tgl" required>
+                    <input class="form-control" type="date" name="tgl" value="tgl" required>
                 </div>
                 <div class="row mt-2">
                     <b> Lokasi Pemberian (Ruangan,Tempat,Gedung) </b>
                 </div>
                 <div class="row w-25 mx-1">
-                    <input type="text" name="lokasi" placeholder="lokasi" required>
+                    <input class="form-control" type="text" name="lokasi" placeholder="lokasi" required>
                 </div>
                 <div class="row mt-2">
                     <b> Pemberi Gratifikasi </b>
                 </div>
                 <div class="row w-25 mx-1">
-                    <input type="text" name="gratifikasi" id="gratifikasi" required>
+                    <input class="form-control" type="text" name="gratifikasi" id="gratifikasi" required>
                 </div>
                 <div class="row mt-2">
                     <b> Lampirkan Bukti </b>
@@ -175,7 +175,7 @@
                             <b>Nama Lengkap</b>
                         </div>
                         <div class="col">
-                            <input type="text" class="w-75" name="namalengkap" value="" required>
+                            <input type="text" class="form-control w-75" name="namalengkap" value="" required>
                         </div>
                     </div>
                     <div class="row mt-2">
@@ -183,7 +183,7 @@
                             <b>NIP</b>
                         </div>
                         <div class="col">
-                            <input type="number" class="w-75" name="nip1" value="" required>
+                            <input type="number" class="form-control w-75" name="nip1" value="" required>
                         </div>
                     </div>
                     <div class="row mt-2">
@@ -191,7 +191,7 @@
                             <b>Jabatan</b>
                         </div>
                         <div class="col">
-                            <input type="text" class="w-50" name="jabatan" value="" required>
+                            <input type="text" class="form-control w-50" name="jabatan" value="" required>
                         </div>
                     </div>
                     <div class="row mt-2">
@@ -199,7 +199,7 @@
                             <b>Pangkat/Golongan</b>
                         </div>
                         <div class="col">
-                            <input type="text" class="w-50" name="pangkat" value="" required>
+                            <input type="text" class="form-control w-50" name="pangkat" value="" required>
                         </div>
                     </div>
                     <div class="row mt-2">
@@ -207,7 +207,7 @@
                             <b>Bagian/Unit</b>
                         </div>
                         <div class="col">
-                            <input type="text" class="w-25" name="bagian" value="" required>
+                            <input type="text" class="form-control w-25" name="bagian" value="" required>
                         </div>
                     </div>
                 </div>
@@ -226,7 +226,7 @@
                             <b>Nama Lengkap</b>
                         </div>
                         <div class="col">
-                            <input type="text" class="w-75" name="namalengkap1" value="" required>
+                            <input type="text" class="form-control w-75" name="namalengkap1" value="" required>
                         </div>
                     </div>
                     <div class="row mt-2">
@@ -234,7 +234,7 @@
                             <b>Jabatan</b>
                         </div>
                         <div class="col">
-                            <input type="text" class="w-75" name="jabatan1" value="" required>
+                            <input type="text" class="form-control w-75" name="jabatan1" value="" required>
                         </div>
                     </div>
                     <div class="row mt-2">
@@ -242,7 +242,7 @@
                             <b>Pangkat/Golongan</b>
                         </div>
                         <div class="col">
-                            <input type="text" class="w-50" name="pangkat1" value="" required>
+                            <input type="text" class="form-control w-50" name="pangkat1" value="" required>
                         </div>
                     </div>
                     <div class="row mt-2">
@@ -250,7 +250,7 @@
                             <b>Bagian/Unit</b>
                         </div>
                         <div class="col">
-                            <input type="text" class="w-50" name="bagian1" value="" required>
+                            <input type="text" class="form-control w-50" name="bagian1" value="" required>
                         </div>
                     </div>
                     <div class="row mt-2">
@@ -258,7 +258,7 @@
                             <b>Bentuk Potensi Benturan Kepentingan</b>
                         </div>
                         <div class="col">
-                            <input type="text" class="w-75" name="bentukpoten" placeholder="bentukpoten"
+                            <input type="text" class="form-control w-75" name="bentukpoten" placeholder="bentukpoten"
                                 required>
                         </div>
                     </div>

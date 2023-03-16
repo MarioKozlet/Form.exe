@@ -1,6 +1,4 @@
 @include('layouts.main')
-{{-- @section('container') --}}
-{{-- <link rel="stylesheet" href="{{ mix('/css/style.css') }}"> --}}
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed&display=swap');
   .container {

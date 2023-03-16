@@ -1,32 +1,45 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta16/dist/css/tabler-flags.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta16/dist/css/tabler-payments.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta16/dist/css/tabler-vendors.min.css">
-
-    <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta16/dist/js/tabler.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta16/dist/css/tabler.min.css">
-
-    <!-- My Style -->
-    <link rel="stylesheet" href="/css/style-login.css">
-
-    <title>Halaman</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title> Lmao </title>
+    <link href="{{asset('/css/tabler.css')}}" rel="stylesheet"/>
   </head>
-  <body>
-
-    <div class="container mt-3">
-        @yield('container')
-    </div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <body >
+    <div class="wrapper">
+      <div class="sticky-top">
+        <header class="navbar navbar-expand-md navbar-light sticky-top d-print-none">
+          <div class="container-xl">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+              <a href=".">
+                {{-- <img src="./static/logo.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image"> --}}
+              </a>
+            </h1>
+            <div class="navbar-nav flex-row order-md-last">
+              <div class="nav-item d-none d-md-flex me-3">
+                <div class="btn-list">
+                  <a href="https://github.com/tabler/tabler" class="btn" target="_blank" rel="noreferrer">
+                    Masuk
+                  </a>
+                  <a href="https://github.com/sponsors/codecalm" class="btn" target="_blank" rel="noreferrer">
+                    Daftar
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+        <div class="page-body">
+          <div class="container-xl">
+            @yield('container')
+          </div>
+        </div>
+    <script src="{{asset('/js/tabler.min.js')}}"></script>>
   </body>
 </html>

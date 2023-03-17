@@ -175,7 +175,8 @@
                             <b>Nama Lengkap</b>
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control w-75" name="namalengkap" value="" required>
+                            <input type="text" class="form-control w-75" name="namalengkap" value=""
+                                required>
                         </div>
                     </div>
                     <div class="row mt-2">
@@ -226,7 +227,8 @@
                             <b>Nama Lengkap</b>
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control w-75" name="namalengkap1" value="" required>
+                            <input type="text" class="form-control w-75" name="namalengkap1" value=""
+                                required>
                         </div>
                     </div>
                     <div class="row mt-2">
@@ -258,8 +260,8 @@
                             <b>Bentuk Potensi Benturan Kepentingan</b>
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control w-75" name="bentukpoten" placeholder="bentukpoten"
-                                required>
+                            <input type="text" class="form-control w-75" name="bentukpoten"
+                                placeholder="bentukpoten" required>
                         </div>
                     </div>
                 </div>

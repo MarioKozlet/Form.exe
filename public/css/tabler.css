@@ -1346,7 +1346,7 @@ progress {
   width: 100%;
   margin-bottom: 1rem;
   color: inherit;
-  vertical-align: top;
+  vertical-align: middle;
   border-color: rgba(98, 105, 118, 0.16); }
   .table > :not(caption) > * > *, .markdown > table > :not(caption) > * > * {
     padding: 0.5rem 0.5rem;

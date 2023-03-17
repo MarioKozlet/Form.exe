@@ -15,13 +15,29 @@
           <div class="collapse navbar-collapse" id="navbar-menu">
             <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
               <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="{{route('admin.index')}}" >
-                    <span class="nav-link-icon d-md-none d-lg-inline-block fs-4">
-                        <i class="ti ti-user"></i>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#navbar-extra" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false">
+                    <span class="nav-link-icon d-md-none d-lg-inline-block">
                     </span>
                     <span class="nav-link-title">
+                      Admin
+                    </span>
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{{route('admin.index')}}" >
                       Admin Menu
+                    </a>
+                    <a class="dropdown-item" href="{{route('usermanage.index')}}" >
+                      User Management
+                    </a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ route('page-1') }}" >
+                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    </span>
+                    <span class="nav-link-title">
+                      Form
                     </span>
                   </a>
                 </li>

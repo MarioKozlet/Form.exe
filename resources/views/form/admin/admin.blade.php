@@ -25,6 +25,9 @@
             <td> Dummy </td>
             <td> Dummy </td>
             <td align="center"> 
+                <button class="btn btn-indigo">
+                    <i class="ti ti-eye"></i>
+                </button>    
                 <button class="btn btn-warning">
                     <i class="ti ti-edit"></i>
                 </button>    
@@ -54,11 +57,6 @@
         </div>
         
         
-        <!-- Optional: Place to the bottom of scripts -->
-        <script>
-            const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
-        
-        </script>
     </table>
 </div>
 @endsection

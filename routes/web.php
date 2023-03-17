@@ -1,11 +1,12 @@
 <?php
 
-use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UserManageController;
 // use Symfony\Component\CssSelector\XPath\Extension\FunctionExtension;
 
 /*
@@ -27,6 +28,7 @@ Route::get('/', [PageController::class, 'Page1'])->name('page-1');
 Route::post('/page-1/proses', [PageController::class, 'Page1Proses'])->name('page-1-proses');
 
 Route::resource('/admin', AdminController::class, ['name' => 'admin']);
+Route::resource('/usermanage', UserManageController::class, ['name' => 'user']);
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store'])->name('register');

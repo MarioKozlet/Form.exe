@@ -269,7 +269,7 @@
             </div>
         </fieldset>
         <button type="submit" class="btn btn-primary"> Kirim </button>
-        <a type="submit" class="btn btn-danger" href="/home"> Batal </a>
+        <a type="submit" class="btn btn-danger" href="/admin"> Batal </a>
     </form>
 </div>
 <div class="container text-center">

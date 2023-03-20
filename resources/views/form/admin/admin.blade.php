@@ -28,12 +28,12 @@
                     <td class="w-25"> {{ $item->nip }} </td>
                     <td class="w-50"> {{ $item->nama }} </td>
                     <td align="center">
-                        <button class="btn btn-indigo">
+                        <a href="{{ route('admin.show', ['admin' => $item->id] ) }}" class="btn btn-indigo">
                             <i class="ti ti-eye"></i>
-                        </button>
-                        <button class="btn btn-warning">
+                        </a>
+                        <a href="{{ route('admin.edit', ['admin' => $item->id] ) }}" class="btn btn-warning">
                             <i class="ti ti-edit"></i>
-                        </button>
+                        </a>
                         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDelete">
                             <i class="ti ti-trash"></i>
                         </button>

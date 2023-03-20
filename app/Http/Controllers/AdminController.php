@@ -51,7 +51,10 @@ class AdminController extends Controller
      */
     public function show($id)
     {
-        //
+        $form = form::findOrFail($id);
+        return view('form.admin.show', [
+            'form' => $form
+        ]);
     }
 
     /**
@@ -62,7 +65,10 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-        //
+        $form = form::findOrFail($id);
+        return view('form.admin.edit', [
+            'form' => $form
+        ]);
     }
 
     /**

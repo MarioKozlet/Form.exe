@@ -15,7 +15,7 @@ class UserManageController extends Controller
     public function index()
     {
         $user = User::query()->get();
-        return view('form.admin.usermanage', [
+        return view('form.usermanage.usermanage', [
             'users' => $user
         ]);
     }

@@ -31,7 +31,6 @@
                     <td> <input class="form-control w-50 @error('email') is-invalid @enderror" type="email"
                             name="email" value="{{ old('email') }}" required>
                         <div class="invalid-feedback">
-                            {{ $messages }}
                         </div>
                     </td>
                 </tr>

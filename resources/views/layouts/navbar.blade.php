@@ -8,33 +8,36 @@
                       {{-- <img src="./static/logo.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image"> --}}
                   </a>
               </h1>
-              <div class="navbar-nav flex-row order-md-last">
-                  <a href="{{ route('login') }}" class="btn btn-outline-indigo mx-2"> Login </a>
-                  <a href="{{ route('register') }}" class="btn btn-outline-indigo"> Register </a>
-              </div>
-              {{-- @if (in_array(auth()->user()->role, ['admin'])) --}}
+              @auth
+              @else
+                  <div class="navbar-nav flex-row order-md-last">
+                      <a href="{{ route('login') }}" class="btn btn-outline-indigo mx-2"> Login </a>
+                      <a href="{{ route('register') }}" class="btn btn-outline-indigo"> Register </a>
+                  </div>
+              @endauth
               <div class="collapse navbar-collapse" id="navbar-menu">
                   <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
                       <ul class="navbar-nav">
-                          <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#navbar-extra" data-bs-toggle="dropdown"
-                                  data-bs-auto-close="outside" role="button" aria-expanded="false">
-                                  <span class="nav-link-icon d-md-none d-lg-inline-block">
-                                  </span>
-                                  <span class="nav-link-title">
-                                      Admin
-                                  </span>
-                              </a>
-                              <div class="dropdown-menu">
-                                  <a class="dropdown-item" href="{{ route('admin.index') }}">
-                                      Admin Menu
+                          @if (auth()->user()->role == 'admin')
+                              <li class="nav-item dropdown">
+                                  <a class="nav-link dropdown-toggle" href="#navbar-extra" data-bs-toggle="dropdown"
+                                      data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                      <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                      </span>
+                                      <span class="nav-link-title">
+                                          Admin
+                                      </span>
                                   </a>
-                                  <a class="dropdown-item" href="{{ route('usermanage.index') }}">
-                                      User Management
-                                  </a>
-                              </div>
-                          </li>
-                          {{-- @endif --}}
+                                  <div class="dropdown-menu">
+                                      <a class="dropdown-item" href="{{ route('admin.index') }}">
+                                          Admin Menu
+                                      </a>
+                                      <a class="dropdown-item" href="{{ route('usermanage.index') }}">
+                                          User Management
+                                      </a>
+                                  </div>
+                              </li>
+                          @endif
                           <li class="nav-item">
                               <a class="nav-link" href="/">
                                   <span class="nav-link-icon d-md-none d-lg-inline-block">
@@ -45,7 +48,7 @@
                               </a>
                           </li>
                       </ul>
+                      </li>
+                      </ul>
                   </div>
-              </div>
-          </div>
       </header>

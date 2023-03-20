@@ -11,8 +11,8 @@
             text-align: center
         }
     </style>
-    <title>Admin Page</title>
-    <h3> Insert Any Text </h3>
+    <title>Admin Menu</title>
+    <h3> Admin Menu </h3>
     <div class="table-responsive-md">
         <table class="table table-striped table-nowrap">
             <tr>
@@ -28,10 +28,10 @@
                     <td class="w-25"> {{ $item->nip }} </td>
                     <td class="w-50"> {{ $item->nama }} </td>
                     <td align="center">
-                        <a href="{{ route('admin.show', ['admin' => $item->id] ) }}" class="btn btn-indigo">
+                        <a href="{{ route('admin.show', ['admin' => $item->id]) }}" class="btn btn-indigo">
                             <i class="ti ti-eye"></i>
                         </a>
-                        <a href="{{ route('admin.edit', ['admin' => $item->id] ) }}" class="btn btn-warning">
+                        <a href="{{ route('admin.edit', ['admin' => $item->id]) }}" class="btn btn-warning">
                             <i class="ti ti-edit"></i>
                         </a>
                         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDelete">

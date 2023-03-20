@@ -20,8 +20,8 @@ use App\Http\Controllers\UserManageController;
 |
 */
 
-Route::get('/login', [LoginController::class, 'index'])->name('login');
-Route::post('/login', [LoginController::class, 'authenticate'])->name('authlogin');
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate'])->name('authlogin')->middleware('guest');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::resource('/', FormController::class, ['name' => 'formPage']);

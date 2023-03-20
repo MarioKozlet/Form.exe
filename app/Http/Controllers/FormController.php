@@ -36,7 +36,6 @@ class FormController extends Controller
     public function store(Request $request)
     {
 
-        // dd($request);
 
         $validatedData = $request->validate([
             'email' => 'email:dns',

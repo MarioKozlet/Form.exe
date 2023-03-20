@@ -56,7 +56,7 @@
             <td class="fw-bold"> File </td>
             <td class="fw-bold"> : </td>
             <td>
-                <iframe src="{{ asset('/storage/' . $form->image) }}" type="pdf">
+                <iframe src="{{ asset('storage/' . $form->image) }}" type="pdf">
                 </iframe>
             </td>
         </tr>

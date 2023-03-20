@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\form;
+use App\Models\User;
 
 class AdminController extends Controller
 {
@@ -80,7 +81,37 @@ class AdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $update = [
+            'email' => $request->email,
+            'nip' => $request->nip,
+            'nip1' => $request->nip1,
+            'nama' => $request->nama,
+            'jenis' => $request->jenis,
+            'deskripsi' => $request->deskripsi,
+            'harga' => $request->harga,
+            'peristiwa' => $request->peristiwa,
+            'tgl' => $request->tgl,
+            'lokasi' => $request->lokasi,
+            'gratifikasi' => $request->gratifikasi,
+            'namalengkap' => $request->namalengkap,
+            'namalengkap1' => $request->namalengkap1,
+            'jabatan' => $request->jabatan,
+            'pangkat' => $request->pangkat,
+            'jabatan1' => $request->jabatan1,
+            'pangkat1' => $request->pangkat1,
+            'bagian' => $request->bagian,
+            'bagian1' => $request->bagian1,
+            'bentukpoten' => $request->bentukpoten
+        ];
+
+        if ($request->file('image')) {
+            $update['image'] = $request->file('image')->store('file-images');
+        }
+
+        form::where('id', $id)
+            ->update($update);
+        return redirect('/admin')->with('Data Telah Sukses Di Edit');
     }
 
     /**

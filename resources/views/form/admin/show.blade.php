@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('container')
-<h2> Detail Data Form </h2>
+    <h2> Detail Data Form </h2>
     <table cellpadding=5>
         <tr>
             <td class="fw-bold"> Email </td>
@@ -55,8 +55,8 @@
         <tr style="vertical-align:top ">
             <td class="fw-bold"> File </td>
             <td class="fw-bold"> : </td>
-            <td> 
-                <iframe src="{{ asset('/storage' . $form->image ) }}" type="pdf">
+            <td>
+                <iframe src="{{ asset('/storage/' . $form->image) }}" type="pdf">
                 </iframe>
             </td>
         </tr>

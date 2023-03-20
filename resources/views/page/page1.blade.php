@@ -31,6 +31,7 @@
                     <td> <input class="form-control w-50 @error('email') is-invalid @enderror" type="email"
                             name="email" value="{{ old('email') }}" required>
                         <div class="invalid-feedback">
+                            {{ $messages }}
                         </div>
                     </td>
                 </tr>
@@ -38,13 +39,19 @@
                     <td><b> Nama </b></td>
                     <td> : </td>
                     <td> <input class="form-control w-50 @error('nama') is-invalid @enderror" type="text"
-                            name="nama" value="" required> </td>
+                            name="nama" value="{{ old('nama') }}" required>
+                        <div class="invalid-feedback">
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td><b> NIP </b></td>
                     <td> : </td>
                     <td> <input class="form-control w-50 @error('nip') is-invalid @enderror" type="number"
-                            name="nip" value="" required> </td>
+                            name="nip" value="value="{{ old('nip') }} required>
+                        <div class="invalid-feedback">
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td><b> Jenis Gratifikasi </b></td>
@@ -147,26 +154,37 @@
                     <b>Tanggal Pemberian</b>
                 </div>
                 <div class="row w-25 mx-1 mt-2">
-                    <input class="form-control" type="date" name="tgl" value="tgl" required>
+                    <input class="form-control @error('date') is-invalid @enderror" type="date" name="tgl"
+                        value="{{ old('tgl') }}" required>
+                    <div class="invalid-feedback">
+                    </div>
                 </div>
                 <div class="row mt-2">
                     <b> Lokasi Pemberian (Ruangan,Tempat,Gedung) </b>
                 </div>
                 <div class="row w-25 mx-1">
-                    <input class="form-control" type="text" name="lokasi" placeholder="lokasi" required>
+                    <input class="form-control @error('lokasi') is-invalid @enderror" type="text" name="lokasi"
+                        value="{{ old('lokasi') }}" placeholder="lokasi" required>
+                    <div class="invalid-feedback">
+                    </div>
                 </div>
                 <div class="row mt-2">
                     <b> Pemberi Gratifikasi </b>
                 </div>
                 <div class="row w-25 mx-1">
-                    <input class="form-control" type="text" name="gratifikasi" id="gratifikasi" required>
+                    <input class="form-control @error('gratifikasi') is-invalid @enderror" type="text"
+                        name="gratifikasi" value="{{ old('gratifikasi') }}" id="gratifikasi" required>
+                    <div class="invalid-feedback">
+                    </div>
                 </div>
                 <div class="row mt-2">
                     <b> Lampirkan Bukti </b>
                 </div>
                 <div class="row">
                     <div class="col-md-9">
-                        <input type="file" id="image" name="image" value="image" required>
+                        <input type="file" class="@error('image') is-invalid @enderror" id="image"
+                            name="image" value="image" required>
+                        <div class="invalid-feedback"></div>
                     </div>
                 </div>
         </fieldset>
@@ -181,8 +199,10 @@
                             <b>Nama Lengkap</b>
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control w-75" name="namalengkap" value=""
-                                required>
+                            <input type="text" class="form-control w-75 @error('namalengkap') is-invalid @enderror"
+                                name="namalengkap" value="{{ old('namalengkap') }}" required>
+                            <div class="invalid-feedback">
+                            </div>
                         </div>
                     </div>
                     <div class="row mt-2">
@@ -190,7 +210,10 @@
                             <b>NIP</b>
                         </div>
                         <div class="col">
-                            <input type="number" class="form-control w-75" name="nip1" value="" required>
+                            <input type="number" class="form-control w-75 @error('nip1') is-invalid @enderror"
+                                name="nip1" value="{{ old('nip1') }}" required>
+                            <div class="invalid-feedback">
+                            </div>
                         </div>
                     </div>
                     <div class="row mt-2">
@@ -198,7 +221,10 @@
                             <b>Jabatan</b>
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control w-50" name="jabatan" value="" required>
+                            <input type="text" class="form-control w-50 @error('jabatan') is-invalid @enderror"
+                                name="jabatan" value="{{ old('jabatan') }}" required>
+                            <div class="invalid-feedback">
+                            </div>
                         </div>
                     </div>
                     <div class="row mt-2">
@@ -206,7 +232,10 @@
                             <b>Pangkat/Golongan</b>
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control w-50" name="pangkat" value="" required>
+                            <input type="text" class="form-control w-50 @error('pangkat') is-invalid @enderror"
+                                name="pangkat" value="{{ old('pangkat') }}" required>
+                            <div class="invalid-feedback">
+                            </div>
                         </div>
                     </div>
                     <div class="row mt-2">
@@ -214,7 +243,10 @@
                             <b>Bagian/Unit</b>
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control w-25" name="bagian" value="" required>
+                            <input type="text" class="form-control w-25 @error('bagian') is-invalid @enderror"
+                                name="bagian" value="{{ old('bagian') }}" required>
+                            <div class="invalid-feedback">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -233,8 +265,12 @@
                             <b>Nama Lengkap</b>
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control w-75" name="namalengkap1" value=""
-                                required>
+                            <input type="text"
+                                class="form-control w-75 @error('namalengkap1') is-invalid @enderror"
+                                name="namalengkap1" value="{{ old('namalengkap1') }}">
+                            <div class="invalid-feedback">
+                                $messages
+                            </div>
                         </div>
                     </div>
                     <div class="row mt-2">
@@ -242,7 +278,10 @@
                             <b>Jabatan</b>
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control w-75" name="jabatan1" value="" required>
+                            <input type="text" class="form-control w-75 @error('jabatan1') is-invalid @enderror"
+                                name="jabatan1" value="{{ old('jabatan1') }}" required>
+                            <div class="invalid-feedback">
+                            </div>
                         </div>
                     </div>
                     <div class="row mt-2">
@@ -250,7 +289,10 @@
                             <b>Pangkat/Golongan</b>
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control w-50" name="pangkat1" value="" required>
+                            <input type="text" class="form-control w-50 @error('pangkat1') is-invalid @enderror"
+                                name="pangkat1" value="{{ old('pangkat1') }}" required>
+                            <div class="invalid-feedback">
+                            </div>
                         </div>
                     </div>
                     <div class="row mt-2">
@@ -258,7 +300,10 @@
                             <b>Bagian/Unit</b>
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control w-50" name="bagian1" value="" required>
+                            <input type="text" class="form-control w-50 @error('bagian1') is-invalid @enderror"
+                                name="bagian1" value="{{ old('bagian1') }}" required>
+                            <div class="invalid-feedback">
+                            </div>
                         </div>
                     </div>
                     <div class="row mt-2">
@@ -266,15 +311,18 @@
                             <b>Bentuk Potensi Benturan Kepentingan</b>
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control w-75" name="bentukpoten"
-                                placeholder="bentukpoten" required>
+                            <input type="text"
+                                class="form-control w-75 @error('bentukpoten') is-invalid @enderror"
+                                name="bentukpoten" placeholder="bentukpoten" required>
+                            <div class="invalid-feedback">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </fieldset>
         <button type="submit" class="btn btn-primary"> Kirim </button>
-        <a type="submit" class="btn btn-danger" href="/admin"> Batal </a>
+        <button type="reset" class="btn btn-danger">Batal</button>
     </form>
 </div>
 <div class="container text-center">

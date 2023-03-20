@@ -122,6 +122,8 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
-        //
+        form::where('id', $id)
+            ->delete();
+        return redirect('/admin')->with('Data Telah Berhasil Dihapus');
     }
 }

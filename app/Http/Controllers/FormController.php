@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Form;
 use Illuminate\Http\Request;
+use Illuminate\Contracts\Validation\Validator;
 
 class FormController extends Controller
 {
@@ -24,6 +25,7 @@ class FormController extends Controller
      */
     public function create()
     {
+
         return view('page.page1');
     }
 

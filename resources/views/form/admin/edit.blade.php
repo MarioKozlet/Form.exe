@@ -331,7 +331,7 @@
             </div>
         </fieldset>
         <button type="submit" class="btn btn-primary"> Kirim </button>
-        <a type="submit" class="btn btn-danger" href="/home"> Batal </a>
+        <a type="submit" class="btn btn-danger" href="{{ route('admin.index') }}"> Batal </a>
     </form>
 </div>
 <div class="container text-center">

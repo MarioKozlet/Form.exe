@@ -24,8 +24,7 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'authenticate'])->name('authlogin');
 // Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::get('/', [PageController::class, 'Page1'])->name('page-1');
-Route::post('/page-1/proses', [PageController::class, 'Page1Proses'])->name('page-1-proses');
+Route::resource('/', FormController::class, ['name' => 'page']);
 
 Route::resource('/admin', AdminController::class, ['name' => 'admin']);
 Route::resource('/usermanage', UserManageController::class, ['name' => 'user']);

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\form;
 
 class AdminController extends Controller
 {
@@ -13,7 +14,12 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('form.admin.admin');
+        $form = form::query()
+            ->get();
+
+        return view('form.admin.admin', [
+            'form' => $form
+        ]);
     }
 
     /**

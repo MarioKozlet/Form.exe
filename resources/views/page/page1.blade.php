@@ -21,24 +21,30 @@
     <div>
         <p class="f"><u><b> Menu Laporan Gratifikasi </b></u></p>
     </div>
-    <form action="/page-1/proses" method="POST" enctype="multipart/form-data">
+    <form action="/" method="POST" enctype="multipart/form-data">
         @csrf
         <fieldset class="form-fieldset">
             <table class="table table-borderless">
                 <tr>
                     <td><b> Email </b></td>
                     <td> : </td>
-                    <td> <input class="form-control w-50" type="email" name="email" required> </td>
+                    <td> <input class="form-control w-50 @error('email') is-invalid @enderror" type="email"
+                            name="email" value="{{ old('email') }}" required>
+                        <div class="invalid-feedback">
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td><b> Nama </b></td>
                     <td> : </td>
-                    <td> <input class="form-control w-50" type="text" name="nama" value="" required> </td>
+                    <td> <input class="form-control w-50 @error('nama') is-invalid @enderror" type="text"
+                            name="nama" value="" required> </td>
                 </tr>
                 <tr>
                     <td><b> NIP </b></td>
                     <td> : </td>
-                    <td> <input class="form-control w-50" type="number" name="nip" value="" required> </td>
+                    <td> <input class="form-control w-50 @error('nip') is-invalid @enderror" type="number"
+                            name="nip" value="" required> </td>
                 </tr>
                 <tr>
                     <td><b> Jenis Gratifikasi </b></td>

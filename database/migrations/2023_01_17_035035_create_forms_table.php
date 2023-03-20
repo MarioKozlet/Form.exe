@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('nip');
             $table->integer('nip1');
             $table->string('nama');
-            $table->enum('jenis',[
+            $table->enum('jenis', [
                 'uang',
                 'barang',
                 'diskon',

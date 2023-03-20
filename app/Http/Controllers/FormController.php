@@ -14,7 +14,7 @@ class FormController extends Controller
      */
     public function index()
     {
-        return view('form.index');
+        return view('page.page1');
     }
 
     /**
@@ -24,7 +24,7 @@ class FormController extends Controller
      */
     public function create()
     {
-        return view('form.index');
+        return view('page.page1');
     }
 
     /**
@@ -35,6 +35,8 @@ class FormController extends Controller
      */
     public function store(Request $request)
     {
+
+        // dd($request);
 
         $validatedData = $request->validate([
             'email' => 'email:dns',
@@ -48,7 +50,7 @@ class FormController extends Controller
             'tgl' => 'required',
             'lokasi' => 'required',
             'gratifikasi' => 'required',
-            'image' => 'image|pdf',
+            'image' => 'required|file|max:2024',
             'namalengkap' => 'required',
             'namalengkap1' => 'required',
             'jabatan' => 'required',
@@ -61,7 +63,6 @@ class FormController extends Controller
         ]);
 
 
-        $validatedData['user_id'] = auth()->user()->id;
         if ($request->file('image')) {
             $validatedData['image'] = $request->file('image')->store('file-images');
         }

@@ -38,7 +38,17 @@ class UserManageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'email' => 'required|email:dns',
+            'name' => 'required|max:25',
+            'role' => 'required',
+            'username' => 'required|max:25',
+            'password' => 'required|min:8'
+        ]);
+
+        $validatedData['password'] = bcrypt($validatedData['password']);
+        User::create($validatedData);
+        return redirect('/usermanage')->with('User Berhasil Di Buat');
     }
 
     /**
@@ -72,7 +82,27 @@ class UserManageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => ['required'],
+            'username' => ['required'],
+            'email' => ['email:dns', 'required'],
+            'password' => ['nullable', 'min:8'],
+            'role' => ['required']
+        ]);
+        $user = User::findOrFail($id);
+        $user->update([
+            'name' => $validatedData['name'],
+            'username' => $validatedData['username'],
+            'email' => $validatedData['email'],
+            'role' => $validatedData['role'],
+        ]);
+
+        if ($validatedData['password']) {
+            $validatedData['password'] = bcrypt($validatedData['password']);
+            $user->update(['password' => $validatedData['password']]);
+        }
+
+        return redirect('/usermanage')->with('editSuccess', 'User Telah Diedit');
     }
 
     /**

@@ -185,6 +185,7 @@
                             name="image" value="image" required>
                         <div class="invalid-feedback"></div>
                     </div>
+                    <small><b>Maksimal 1 megabyte</b></small>
                 </div>
         </fieldset>
         <div class="mt-4 mb-3 f">

@@ -51,7 +51,7 @@ class FormController extends Controller
             'tgl' => 'required',
             'lokasi' => 'required',
             'gratifikasi' => 'required',
-            'image' => 'required|file|max:2024',
+            'image' => 'required|file|max:1024',
             'namalengkap' => 'required',
             'namalengkap1' => 'required',
             'jabatan' => 'required',

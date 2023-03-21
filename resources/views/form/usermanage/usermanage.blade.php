@@ -27,6 +27,9 @@
                 </td>
             </tr>
 
+        <form action="{{ route('usermanage.destroy', $u->id) }}" method="post">
+            @method('delete')
+            @csrf
             <div class="modal fade" id="modalDelete{{ $u->id }}" tabindex="-1" data-bs-backdrop="static"
                 data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
@@ -41,11 +44,12 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Batal </button>
-                            <button type="button" class="btn btn-danger"> Hapus Data </button>
+                            <button type="submit" class="btn btn-danger"> Hapus Data </button>
                         </div>
                     </div>
                 </div>
             </div>
+        </form>
 
             <form action="{{ route('usermanage.update', $u->id) }}" method="post">
                 @method('put')

@@ -85,7 +85,7 @@
                                 </label>
                                 <label class="form-check">
                                     <input class="form-check-input" type="radio" name="jenis" id="jenis"
-                                        value="pehinanpan" required>
+                                        value="peginapan" required>
                                     <span class="form-check-label">Fasilitas Penginapan</span>
                                 </label>
                                 <label class="form-check">

@@ -111,7 +111,7 @@ class AdminController extends Controller
 
         form::where('id', $id)
             ->update($update);
-        return redirect('/admin')->with('Data Telah Sukses Di Edit');
+        return redirect('/admin')->with('EditSuccess','Data Telah Sukses Di Edit');
     }
 
     /**
@@ -124,6 +124,6 @@ class AdminController extends Controller
     {
         form::where('id', $id)
             ->delete();
-        return redirect('/admin')->with('Data Telah Berhasil Dihapus');
+        return redirect('/admin')->with('DeleteSuccess','Data Telah Berhasil Dihapus');
     }
 }

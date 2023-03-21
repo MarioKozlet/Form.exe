@@ -48,7 +48,7 @@ class UserManageController extends Controller
 
         $validatedData['password'] = bcrypt($validatedData['password']);
         User::create($validatedData);
-        return redirect('/usermanage')->with('User Berhasil Di Buat');
+        return redirect('/usermanage')->with('success','User Berhasil Di Buat');
     }
 
     /**
@@ -113,6 +113,8 @@ class UserManageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        User::findOrFail($id)
+            ->delete();
+        return redirect('/usermanage')->with('DeleteSuccess','Data Telah Sukses Di Hapus');
     }
 }
